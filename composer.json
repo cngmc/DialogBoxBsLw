@@ -1,0 +1,46 @@
+{
+    "name": "cngmc/dialogboxbslw",
+    "description": "Dialog Box Bootstrap Livewire",
+    "minimum-stability": "stable",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "can",
+            "email": "email@example.com"
+        }
+    ],
+
+    "require": {
+
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cngmc\\DialogBoxBsLw\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cngmc\\DialogBoxBsLw\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cngmc\\DialogBoxBsLw\\DialogBoxBsLwServiceProvider"
+            ],
+            "aliases": {
+                "DialogBoxBsLwFacade": "Cngmc\\DialogBoxBsLw\\DialogBoxBsLwFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "livewire/livewire": "^3.5",
+        "phpunit/phpunit": "^11.0.1",
+        "orchestra/testbench": "^9.1"
+    }
+}
