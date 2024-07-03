@@ -58,7 +58,7 @@ Sample Livewire component (livewire/sample.php)
 
 ```
 Sample Livewire component blade file (livewire/sample.blade.php)
-```html
+```
     <button wire:click="dialogBox('sample', 'openFn', '1', 'Test')" class="btn btn-primary">Open Dialog</button>
     <x-dialogboxbslw::dialog modal="dialogbox-sample" />
 ```
@@ -71,7 +71,7 @@ php artisan vendor:publish --tag=dialogboxbslw --force
 ```
 
 You can make the necessary adjustments for customized component design in the
-<span style="font-family:monospace;font-size:12px;">resources/views/vendor/dialogboxbslw/components/dialog.blade.php</span> file.
+resources/views/vendor/dialogboxbslw/components/dialog.blade.php
 
 
 ### Using dynamic data in dialog 
