@@ -28,31 +28,16 @@
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('dialogBox', () => ({
-                id: '',
-                name: '',
-                title: '',
-                body: '',
-                actionButtonText: '',
-                cancelButtonText: '',
-                params: [],
                 init() {
                     window.addEventListener('dialogBoxEventListener', this.handleDialogBoxEvent.bind(this));
                 },
                 handleDialogBoxEvent(event) {
-                    console.log(event.detail)
-                    const { id, name, contents, params, display } = event.detail[0];
+                    const { id, name, contents = {}, params = [], display } = event.detail[0];
+                    Object.assign(this, { id, name, ...contents, params });
 
-                    this.id = id;
-                    this.name = name;
-                    this.title = contents.title;
-                    this.body = contents.body;
-                    this.actionButtonText = contents.actionButtonText;
-                    this.cancelButtonText = contents.cancelButtonText;
-                    this.params = params;
-
-                    this.showModal(display);
+                    this.displayModal(display);
                 },
-                showModal(display) {
+                displayModal(display) {
                     $(`#${this.id}`).modal(display);
                 }
             }));
